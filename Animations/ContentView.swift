@@ -21,7 +21,8 @@ struct ContentView: View {
         .scaleEffect(animationAmount)
         .blur(radius: (animationAmount - 1) * 3)
 //        .animation(.default, value: animationAmount)
-        .animation(.interpolatingSpring(stiffness: 50, damping: 1), value: animationAmount) // spring effect
+//        .animation(.interpolatingSpring(stiffness: 50, damping: 1), value: animationAmount) // spring effect
+        .animation(.easeInOut(duration: 2), value: animationAmount)
     }
 }
 
