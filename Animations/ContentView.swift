@@ -17,9 +17,9 @@ struct ContentView: View {
         .frame(width: 200, height: 200)
         .background(enabled ? .blue : .red)
         .foregroundColor(.white)
+        // now clip shape will animate because it is before animation modifier
+        .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 5))
         .animation(.default, value: enabled)
-        .clipShape(RoundedRectangle(cornerRadius: enabled ? 60 : 5)) // clipshape will not animating in this position
-        
     }
 }
 
