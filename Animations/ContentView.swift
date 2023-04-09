@@ -12,7 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         Button("Tap Me") {
-            withAnimation {
+            // we can also send parameters for animating for withAnimation
+            withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
                 animationAmount += 360
             }
         }
